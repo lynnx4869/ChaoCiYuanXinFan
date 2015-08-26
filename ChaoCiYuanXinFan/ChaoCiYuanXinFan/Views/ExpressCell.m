@@ -42,7 +42,7 @@
     UIView *titleBgView = [[UIView alloc] init];
     titleBgView.translatesAutoresizingMaskIntoConstraints = NO;
     titleBgView.backgroundColor = [UIColor blackColor];
-    titleBgView.alpha = 0.5;
+    titleBgView.alpha = 0.8;
     [_bgImageView addSubview:titleBgView];
     
     [titleBgView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -55,7 +55,7 @@
     _titleLabel = [[UILabel alloc] init];
     _titleLabel.translatesAutoresizingMaskIntoConstraints = NO;
     _titleLabel.textColor = [UIColor whiteColor];
-    _titleLabel.font = [UIFont systemFontOfSize:15];
+    _titleLabel.font = [UIFont systemFontOfSize:14];
     _titleLabel.textAlignment = 0;
     [titleBgView addSubview:_titleLabel];
     
@@ -73,11 +73,11 @@
         make.right.equalTo(_videoInfoLabel.mas_left).with.offset(0);
         make.width.equalTo(_videoInfoLabel);
     }];
-    
+
     [_videoInfoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.equalTo(titleBgView.mas_top).with.offset(5);
         make.bottom.equalTo(titleBgView.mas_bottom).with.offset(-5);
-        make.right.equalTo(titleBgView.mas_left).with.offset(-5);
+        make.right.equalTo(titleBgView.mas_right).with.offset(-5);
         make.left.equalTo(_titleLabel.mas_right).with.offset(0);
         make.width.equalTo(_titleLabel);
     }];
@@ -85,18 +85,18 @@
 
 - (void)setModel:(ExpressModel *)model{
     if(_model != model){
+        _model = nil;
         _model = model;
-    }
-    
-    [_bgImageView sd_setImageWithURL:[NSURL URLWithString:model.img] placeholderImage:[UIImage imageNamed:@"tcimg"]];
-    _titleLabel.text = model.title;
-    _videoInfoLabel.text = model.videoInfo;
-    
-//    NSString *string = _videoInfoLabel.text;
-//    NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:string];
-//    [attrString addAttribute:NSForegroundColorAttributeName
-//                       value:[UIColor redColor]
-//                       range:[string rangeOfString:model.latest]];
+        
+        [_bgImageView sd_setImageWithURL:[NSURL URLWithString:model.img] placeholderImage:[UIImage imageNamed:@"tcimg"]];
+        _titleLabel.text = model.title;
+        
+        NSMutableAttributedString *attrString = [[NSMutableAttributedString alloc] initWithString:model.videoInfo];
+        [attrString addAttribute:NSForegroundColorAttributeName
+                           value:[UIColor redColor]
+                           range:[model.videoInfo rangeOfString:model.latest]];
+        _videoInfoLabel.attributedText = attrString;
+    }    
 }
 
 - (void)awakeFromNib {

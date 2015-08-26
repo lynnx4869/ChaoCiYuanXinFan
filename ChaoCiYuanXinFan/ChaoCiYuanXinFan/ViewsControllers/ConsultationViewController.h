@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 lyning. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "RootViewController.h"
 
-@interface ConsultationViewController : UIViewController
+@interface ConsultationViewController : RootViewController
 
 @end

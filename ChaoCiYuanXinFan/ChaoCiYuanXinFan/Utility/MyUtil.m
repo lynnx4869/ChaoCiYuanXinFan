@@ -41,4 +41,13 @@
     return btn;
 }
 
++ (UILabel *)createLabel:(CGRect)frame title:(NSString *)title{
+    UILabel *label = [[UILabel alloc] initWithFrame:frame];
+    label.textAlignment = 1;
+    label.font = [UIFont systemFontOfSize:20];
+    label.textColor = [UIColor blueColor];
+    label.text = title;
+    return label;
+}
+
 @end

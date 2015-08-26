@@ -15,4 +15,6 @@
 
 + (UIButton *)createBtn:(CGRect)frame image:(NSString *)imageName highImage:(NSString *)highImageName selected:(NSString *)selectedName target:(id)target action:(SEL)action;
 
++ (UILabel *)createLabel:(CGRect)frame title:(NSString *)title;
+
 @end

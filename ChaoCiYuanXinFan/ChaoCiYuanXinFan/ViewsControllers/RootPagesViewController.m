@@ -8,6 +8,7 @@
 
 #import "RootPagesViewController.h"
 #import "MyUtil.h"
+#import "RootViewController.h"
 #import "RankingViewController.h"
 #import "CategoryViewController.h"
 #import "ExpressViewController.h"
@@ -42,52 +43,48 @@
 
 #pragma mark - 创建界面
 - (void)createNav{
-    self.navigationItem.titleView = [MyUtil createImageView:CGRectMake(0, 0, 250*44/123, 44) image:@"new_logo"];
+    self.navigationController.navigationBar.hidden = YES;
     
-    UIBarButtonItem *setItem = [[UIBarButtonItem alloc] initWithCustomView:
-                                [MyUtil createBtn:CGRectMake(0, 0, 20, 20)
-                                            image:@"set"
-                                        highImage:@"set_hover"
-                                         selected:nil
-                                           target:self
-                                           action:@selector(gotoSetting:)]];
+    UIImageView *bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 20, ScreenWidth, 44)];
+    bgImageView.userInteractionEnabled = YES;
+    bgImageView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:bgImageView];
     
-    UIBarButtonItem *searchItem = [[UIBarButtonItem alloc] initWithCustomView:
-                                [MyUtil createBtn:CGRectMake(0, 0, 20, 20)
-                                            image:@"glass"
-                                        highImage:@"glass_hover"
-                                         selected:nil
-                                           target:self
-                                           action:@selector(gotoSearch:)]];
+    UIImageView *titleImageView = [[UIImageView alloc] initWithFrame:CGRectMake((ScreenWidth-250*44/123)/2, 0, 250*44/123, 44)];
+    titleImageView.image = [UIImage imageNamed:@"new_logo"];
+    [bgImageView addSubview:titleImageView];
     
-    self.navigationItem.leftBarButtonItems = @[setItem, searchItem];
+    UIButton *setBtn = [MyUtil createBtn:CGRectMake(20, 12, 20, 20)
+                                    image:@"set"
+                                highImage:@"set_hover"
+                                 selected:nil
+                                   target:self
+                                   action:@selector(gotoSetting:)];
+    [bgImageView addSubview:setBtn];
     
-    UIBarButtonItem *timeLineItem = [[UIBarButtonItem alloc] initWithCustomView:
-                                [MyUtil createBtn:CGRectMake(0, 0, 20, 20)
-                                            image:@"clock"
-                                        highImage:@"clock_hover"
-                                         selected:nil
-                                           target:self
-                                           action:@selector(gotoTimeLine:)]];
+    UIButton *searchBtn = [MyUtil createBtn:CGRectMake(50, 12, 20, 20)
+                                image:@"glass"
+                            highImage:@"glass_hover"
+                             selected:nil
+                               target:self
+                               action:@selector(gotoSearch:)];
+    [bgImageView addSubview:searchBtn];
     
-    UIBarButtonItem *CollectsItem = [[UIBarButtonItem alloc] initWithCustomView:
-                                   [MyUtil createBtn:CGRectMake(0, 0, 20, 20)
-                                               image:@"sc"
-                                           highImage:@"sc_hover"
-                                            selected:nil
-                                              target:self
-                                              action:@selector(gotoCollects:)]];
+    UIButton *timeBtn = [MyUtil createBtn:CGRectMake(ScreenWidth-70, 12, 20, 20)
+                                image:@"clock"
+                            highImage:@"clock_hover"
+                             selected:nil
+                               target:self
+                               action:@selector(gotoTimeLine:)];
+    [bgImageView addSubview:timeBtn];
     
-    self.navigationItem.rightBarButtonItems = @[timeLineItem, CollectsItem];
-    
-    UIBarButtonItem *backItem = [[UIBarButtonItem alloc] initWithTitle:@""
-                                                                 style:UIBarButtonItemStylePlain
-                                                                target:nil
-                                                                action:nil];
-    [backItem setBackButtonBackgroundImage:[UIImage imageNamed:@"sp_back"]
-                                  forState:UIControlStateNormal
-                                barMetrics:UIBarMetricsDefault];
-    self.navigationItem.backBarButtonItem = backItem;
+    UIButton *collectsBtn = [MyUtil createBtn:CGRectMake(ScreenWidth-40, 12, 20, 20)
+                                image:@"sc"
+                            highImage:@"sc_hover"
+                             selected:nil
+                               target:self
+                               action:@selector(gotoCollects:)];
+    [bgImageView addSubview:collectsBtn];
 }
 
 - (void)createTopView{
@@ -127,7 +124,8 @@
     NSArray *vcTitleArray = @[@"RankingViewController", @"CategoryViewController", @"ExpressViewController", @"ConsultationViewController", @"GroupViewController"];
     for(NSString *clsString in vcTitleArray){
         Class cls = NSClassFromString(clsString);
-        UIViewController *vc = [[cls alloc] init];
+        RootViewController *vc = [[cls alloc] init];
+        vc.delegate = self;
         [_vcArray addObject:vc];
     }
     

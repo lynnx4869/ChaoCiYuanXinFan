@@ -1,17 +1,20 @@
 //
-//  ExpressViewController.m
+//  ListCategoryViewController.m
 //  ChaoCiYuanXinFan
 //
-//  Created by qianfeng on 15/8/21.
+//  Created by qianfeng on 15/8/24.
 //  Copyright (c) 2015年 lyning. All rights reserved.
 //
 
-#import "ExpressViewController.h"
+#import "ListCategoryViewController.h"
+#import "Const.h"
 #import "MJRefresh.h"
+#import "HttpManager.h"
+#import "MyUtil.h"
 #import "ExpressModel.h"
-#import "ExpressCell.h"
+#import "CategoryDetailCell.h"
 
-@interface ExpressViewController ()
+@interface ListCategoryViewController ()
     <UITableViewDelegate, UITableViewDataSource, MJRefreshBaseViewDelegate, HttpManagerDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -22,12 +25,14 @@
 
 @end
 
-@implementation ExpressViewController
+@implementation ListCategoryViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    [self addNav:_typeTitle bgImage:nil rightBtn:nil withLength:0];
     
     _dataArray = [NSMutableArray array];
     _isLoading = NO;
@@ -41,11 +46,13 @@
 }
 
 - (void)createTableView{
-    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, ScreenHeight-68-(29*(ScreenWidth/5)/108+10)) style:UITableViewStylePlain];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, ScreenHeight-64) style:UITableViewStylePlain];
     _tableView.delegate = self;
     _tableView.dataSource = self;
-    [_tableView registerClass:[ExpressCell class] forCellReuseIdentifier:@"ExpressCellId"];
-    _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    _tableView.backgroundColor = [UIColor clearColor];
+    [_tableView registerClass:[CategoryDetailCell class] forCellReuseIdentifier:@"CategoryDetailCellId"];
     [self.view addSubview:_tableView];
     
     _headerView = [MJRefreshHeaderView header];
@@ -60,12 +67,12 @@
     
     HttpManager *manager = [[HttpManager alloc] init];
     manager.delegate = self;
-    [manager requestGet:lExpressUrl];
+    [manager requestGet:[NSString stringWithFormat:lListByCategoryUrl, _catId]];
 }
 
 #pragma mark - HttpManagerDelegate
 - (void)failure:(AFHTTPRequestOperation *)operation response:(NSError *)error{
-    NSLog(@"Express:%@", error);
+    NSLog(@"CategoryDetail:%@", error);
     _isLoading = NO;
     [_headerView endRefreshing];
 }
@@ -75,20 +82,29 @@
     NSDictionary *rootDic = [NSJSONSerialization JSONObjectWithData:responseObject
                                                             options:NSJSONReadingMutableContainers
                                                               error:nil];
-    for(NSDictionary *dic in rootDic[@"posts"]){
-        ExpressModel *model = [[ExpressModel alloc] init];
-        [model setValuesForKeysWithDictionary:dic];
-        [_dataArray addObject:model];
+    if(![rootDic[@"posts"] isEqual:@""]){
+        for(NSDictionary *dic in rootDic[@"posts"]){
+            ExpressModel *model = [[ExpressModel alloc] init];
+            [model setValuesForKeysWithDictionary:dic];
+            [_dataArray addObject:model];
+        }
     }
     
+    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 40)];
+    label.text = @"没有更多啦。";
+    label.font = [UIFont systemFontOfSize:14];
+    label.textAlignment = 1;
+    _tableView.tableFooterView = label;
+    
     [_tableView reloadData];
+    
     _isLoading = NO;
     [_headerView endRefreshing];
 }
 
 #pragma mark - UITableViewDelegate, UITableViewDataSource
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return (ScreenWidth-16)*340/640;
+    return 80;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -96,10 +112,9 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    ExpressCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ExpressCellId"];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
+    CategoryDetailCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CategoryDetailCellId"];
+    cell.selectionStyle = UITableViewCellSelectionStyleGray;
     cell.model = _dataArray[indexPath.row];
-    cell.selectionStyle = UITableViewCellSelectionStyleNone;
     return cell;
 }
 
@@ -117,5 +132,7 @@
 - (void)dealloc{
     [_headerView free];
 }
+
+
 
 @end

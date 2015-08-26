@@ -25,9 +25,9 @@
 
 //动漫咨询
 //最新资讯(初始00,后续为最后一个)
-#define lConsultationUrl @"http://api.18touch.com/?c=Nzs&a=getlist&cat=%E5%8A%A8%E6%BC%AB%E8%B5%84%E8%AE%AF&img=1&summary=1&lastid=%@&lasttime=%@"
+#define lConsultationUrl @"http://api.18touch.com/?c=Nzs&a=getlist&cat=%@&img=1&summary=1&lastid=%@&lasttime=%@"
 //精彩专题(初始00,后续为最后一个)
-#define lSubjectUrl @"http://api.18touch.com/?c=Nzs&a=getlist&helper=ACG%E7%B2%BE%E5%93%81%E6%96%87%E7%AB%A0&img=1&lastid=%@&lasttime=%@"
+#define lSubjectUrl @"http://api.18touch.com/?c=Nzs&a=getlist&helper=%@&img=1&lastid=%@&lasttime=%@"
 
 
 //兴趣小组(有刷新无加载)

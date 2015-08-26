@@ -7,6 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BC3DBF8D1B8C88AC00B66E68 /* StarView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3DBF8C1B8C88AC00B66E68 /* StarView.m */; };
+		BC3F33F01B8AFD53007280C5 /* CategoryDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3F33EF1B8AFD53007280C5 /* CategoryDetailCell.m */; };
+		BC3F33F31B8B3243007280C5 /* RankingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3F33F21B8B3243007280C5 /* RankingModel.m */; };
+		BC3F33F61B8B3EC3007280C5 /* RankingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3F33F51B8B3EC3007280C5 /* RankingCell.m */; };
+		BC3F33F91B8B41B1007280C5 /* RankingView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC3F33F81B8B41B1007280C5 /* RankingView.m */; };
+		BC425BCD1B8D4CEC0055E030 /* GroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC425BCC1B8D4CEC0055E030 /* GroupModel.m */; };
+		BC425BD01B8D4FBE0055E030 /* GroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC425BCF1B8D4FBE0055E030 /* GroupCell.m */; };
+		BC425BD31B8D529D0055E030 /* GroupHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = BC425BD21B8D529D0055E030 /* GroupHeaderView.m */; };
+		BC425BD61B8D6A5F0055E030 /* NewConsultationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC425BD51B8D6A5F0055E030 /* NewConsultationViewController.m */; };
+		BC425BD91B8D6A720055E030 /* SubjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC425BD81B8D6A720055E030 /* SubjectViewController.m */; };
+		BC425BDF1B8D8FED0055E030 /* ConsultationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC425BDE1B8D8FED0055E030 /* ConsultationModel.m */; };
+		BC425BE21B8D96D30055E030 /* ConsultationBigCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC425BE11B8D96D30055E030 /* ConsultationBigCell.m */; };
+		BC425BE51B8D96DF0055E030 /* ConsultationSmallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC425BE41B8D96DF0055E030 /* ConsultationSmallCell.m */; };
+		BC425BE81B8DA8040055E030 /* SubjectModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC425BE71B8DA8040055E030 /* SubjectModel.m */; };
+		BC425BEB1B8DAE800055E030 /* SubjectCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC425BEA1B8DAE800055E030 /* SubjectCell.m */; };
+		BC425BEE1B8DB5250055E030 /* SubjectDetailModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC425BED1B8DB5250055E030 /* SubjectDetailModel.m */; };
+		BC425BF11B8DB9B70055E030 /* SubjectDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC425BF01B8DB9B70055E030 /* SubjectDetailViewController.m */; };
+		BC425BF41B8DBD7D0055E030 /* RootPopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC425BF31B8DBD7D0055E030 /* RootPopViewController.m */; };
 		BC5A8AD51B86B1F500B76B6A /* RootPagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A8AD41B86B1F500B76B6A /* RootPagesViewController.m */; };
 		BC5A8B121B86F59E00B76B6A /* MyUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A8B111B86F59E00B76B6A /* MyUtil.m */; };
 		BC5A8B161B870CDC00B76B6A /* RankingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A8B151B870CDC00B76B6A /* RankingViewController.m */; };
@@ -58,6 +76,10 @@
 		BC5A8BAC1B871D4C00B76B6A /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A8B9F1B871D4C00B76B6A /* View+MASAdditions.m */; };
 		BC5A8BAD1B871D4C00B76B6A /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A8BA21B871D4C00B76B6A /* ViewController+MASAdditions.m */; };
 		BC5A8BB01B871D7000B76B6A /* ExpressCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC5A8BAF1B871D7000B76B6A /* ExpressCell.m */; };
+		BC8D06421B8AB78A0070E5FA /* CategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8D06411B8AB78A0070E5FA /* CategoryModel.m */; };
+		BC8D06451B8ABB330070E5FA /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8D06441B8ABB330070E5FA /* CategoryCell.m */; };
+		BC8D064B1B8AC70A0070E5FA /* ListCategoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8D064A1B8AC70A0070E5FA /* ListCategoryViewController.m */; };
+		BC8D06511B8AE91E0070E5FA /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BC8D06501B8AE91E0070E5FA /* RootViewController.m */; };
 		BCBF20301B85ED9400A2A7CE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBF202F1B85ED9400A2A7CE /* main.m */; };
 		BCBF20331B85ED9400A2A7CE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BCBF20321B85ED9400A2A7CE /* AppDelegate.m */; };
 		BCBF203B1B85ED9400A2A7CE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCBF203A1B85ED9400A2A7CE /* Images.xcassets */; };
@@ -808,6 +830,42 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BC3DBF8B1B8C88AC00B66E68 /* StarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StarView.h; sourceTree = "<group>"; };
+		BC3DBF8C1B8C88AC00B66E68 /* StarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StarView.m; sourceTree = "<group>"; };
+		BC3F33EE1B8AFD53007280C5 /* CategoryDetailCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryDetailCell.h; sourceTree = "<group>"; };
+		BC3F33EF1B8AFD53007280C5 /* CategoryDetailCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryDetailCell.m; sourceTree = "<group>"; };
+		BC3F33F11B8B3243007280C5 /* RankingModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingModel.h; sourceTree = "<group>"; };
+		BC3F33F21B8B3243007280C5 /* RankingModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingModel.m; sourceTree = "<group>"; };
+		BC3F33F41B8B3EC3007280C5 /* RankingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingCell.h; sourceTree = "<group>"; };
+		BC3F33F51B8B3EC3007280C5 /* RankingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingCell.m; sourceTree = "<group>"; };
+		BC3F33F71B8B41B1007280C5 /* RankingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RankingView.h; sourceTree = "<group>"; };
+		BC3F33F81B8B41B1007280C5 /* RankingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RankingView.m; sourceTree = "<group>"; };
+		BC425BCB1B8D4CEC0055E030 /* GroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupModel.h; sourceTree = "<group>"; };
+		BC425BCC1B8D4CEC0055E030 /* GroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupModel.m; sourceTree = "<group>"; };
+		BC425BCE1B8D4FBE0055E030 /* GroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupCell.h; sourceTree = "<group>"; };
+		BC425BCF1B8D4FBE0055E030 /* GroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupCell.m; sourceTree = "<group>"; };
+		BC425BD11B8D529D0055E030 /* GroupHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupHeaderView.h; sourceTree = "<group>"; };
+		BC425BD21B8D529D0055E030 /* GroupHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupHeaderView.m; sourceTree = "<group>"; };
+		BC425BD41B8D6A5F0055E030 /* NewConsultationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewConsultationViewController.h; sourceTree = "<group>"; };
+		BC425BD51B8D6A5F0055E030 /* NewConsultationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewConsultationViewController.m; sourceTree = "<group>"; };
+		BC425BD71B8D6A720055E030 /* SubjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectViewController.h; sourceTree = "<group>"; };
+		BC425BD81B8D6A720055E030 /* SubjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectViewController.m; sourceTree = "<group>"; };
+		BC425BDD1B8D8FED0055E030 /* ConsultationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultationModel.h; sourceTree = "<group>"; };
+		BC425BDE1B8D8FED0055E030 /* ConsultationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultationModel.m; sourceTree = "<group>"; };
+		BC425BE01B8D96D30055E030 /* ConsultationBigCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultationBigCell.h; sourceTree = "<group>"; };
+		BC425BE11B8D96D30055E030 /* ConsultationBigCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultationBigCell.m; sourceTree = "<group>"; };
+		BC425BE31B8D96DF0055E030 /* ConsultationSmallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConsultationSmallCell.h; sourceTree = "<group>"; };
+		BC425BE41B8D96DF0055E030 /* ConsultationSmallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConsultationSmallCell.m; sourceTree = "<group>"; };
+		BC425BE61B8DA8040055E030 /* SubjectModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectModel.h; sourceTree = "<group>"; };
+		BC425BE71B8DA8040055E030 /* SubjectModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectModel.m; sourceTree = "<group>"; };
+		BC425BE91B8DAE800055E030 /* SubjectCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectCell.h; sourceTree = "<group>"; };
+		BC425BEA1B8DAE800055E030 /* SubjectCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectCell.m; sourceTree = "<group>"; };
+		BC425BEC1B8DB5250055E030 /* SubjectDetailModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectDetailModel.h; sourceTree = "<group>"; };
+		BC425BED1B8DB5250055E030 /* SubjectDetailModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectDetailModel.m; sourceTree = "<group>"; };
+		BC425BEF1B8DB9B70055E030 /* SubjectDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubjectDetailViewController.h; sourceTree = "<group>"; };
+		BC425BF01B8DB9B70055E030 /* SubjectDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubjectDetailViewController.m; sourceTree = "<group>"; };
+		BC425BF21B8DBD7D0055E030 /* RootPopViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootPopViewController.h; sourceTree = "<group>"; };
+		BC425BF31B8DBD7D0055E030 /* RootPopViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootPopViewController.m; sourceTree = "<group>"; };
 		BC5A8AD31B86B1F500B76B6A /* RootPagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootPagesViewController.h; sourceTree = "<group>"; };
 		BC5A8AD41B86B1F500B76B6A /* RootPagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootPagesViewController.m; sourceTree = "<group>"; };
 		BC5A8B101B86F59E00B76B6A /* MyUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyUtil.h; sourceTree = "<group>"; };
@@ -917,6 +975,14 @@
 		BC5A8BA21B871D4C00B76B6A /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
 		BC5A8BAE1B871D7000B76B6A /* ExpressCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpressCell.h; sourceTree = "<group>"; };
 		BC5A8BAF1B871D7000B76B6A /* ExpressCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpressCell.m; sourceTree = "<group>"; };
+		BC8D06401B8AB78A0070E5FA /* CategoryModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryModel.h; sourceTree = "<group>"; };
+		BC8D06411B8AB78A0070E5FA /* CategoryModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryModel.m; sourceTree = "<group>"; };
+		BC8D06431B8ABB330070E5FA /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
+		BC8D06441B8ABB330070E5FA /* CategoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCell.m; sourceTree = "<group>"; };
+		BC8D06491B8AC70A0070E5FA /* ListCategoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListCategoryViewController.h; sourceTree = "<group>"; };
+		BC8D064A1B8AC70A0070E5FA /* ListCategoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListCategoryViewController.m; sourceTree = "<group>"; };
+		BC8D064F1B8AE91E0070E5FA /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
+		BC8D06501B8AE91E0070E5FA /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		BCBF202A1B85ED9400A2A7CE /* ChaoCiYuanXinFan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChaoCiYuanXinFan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BCBF202E1B85ED9400A2A7CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BCBF202F1B85ED9400A2A7CE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -1686,6 +1752,18 @@
 			children = (
 				BC5A8B851B871A9200B76B6A /* ExpressModel.h */,
 				BC5A8B861B871A9200B76B6A /* ExpressModel.m */,
+				BC8D06401B8AB78A0070E5FA /* CategoryModel.h */,
+				BC8D06411B8AB78A0070E5FA /* CategoryModel.m */,
+				BC3F33F11B8B3243007280C5 /* RankingModel.h */,
+				BC3F33F21B8B3243007280C5 /* RankingModel.m */,
+				BC425BCB1B8D4CEC0055E030 /* GroupModel.h */,
+				BC425BCC1B8D4CEC0055E030 /* GroupModel.m */,
+				BC425BDD1B8D8FED0055E030 /* ConsultationModel.h */,
+				BC425BDE1B8D8FED0055E030 /* ConsultationModel.m */,
+				BC425BE61B8DA8040055E030 /* SubjectModel.h */,
+				BC425BE71B8DA8040055E030 /* SubjectModel.m */,
+				BC425BEC1B8DB5250055E030 /* SubjectDetailModel.h */,
+				BC425BED1B8DB5250055E030 /* SubjectDetailModel.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1695,6 +1773,26 @@
 			children = (
 				BC5A8BAE1B871D7000B76B6A /* ExpressCell.h */,
 				BC5A8BAF1B871D7000B76B6A /* ExpressCell.m */,
+				BC8D06431B8ABB330070E5FA /* CategoryCell.h */,
+				BC8D06441B8ABB330070E5FA /* CategoryCell.m */,
+				BC3F33EE1B8AFD53007280C5 /* CategoryDetailCell.h */,
+				BC3F33EF1B8AFD53007280C5 /* CategoryDetailCell.m */,
+				BC3F33F41B8B3EC3007280C5 /* RankingCell.h */,
+				BC3F33F51B8B3EC3007280C5 /* RankingCell.m */,
+				BC3F33F71B8B41B1007280C5 /* RankingView.h */,
+				BC3F33F81B8B41B1007280C5 /* RankingView.m */,
+				BC3DBF8B1B8C88AC00B66E68 /* StarView.h */,
+				BC3DBF8C1B8C88AC00B66E68 /* StarView.m */,
+				BC425BCE1B8D4FBE0055E030 /* GroupCell.h */,
+				BC425BCF1B8D4FBE0055E030 /* GroupCell.m */,
+				BC425BD11B8D529D0055E030 /* GroupHeaderView.h */,
+				BC425BD21B8D529D0055E030 /* GroupHeaderView.m */,
+				BC425BE01B8D96D30055E030 /* ConsultationBigCell.h */,
+				BC425BE11B8D96D30055E030 /* ConsultationBigCell.m */,
+				BC425BE31B8D96DF0055E030 /* ConsultationSmallCell.h */,
+				BC425BE41B8D96DF0055E030 /* ConsultationSmallCell.m */,
+				BC425BE91B8DAE800055E030 /* SubjectCell.h */,
+				BC425BEA1B8DAE800055E030 /* SubjectCell.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1714,6 +1812,14 @@
 				BC5A8B1E1B870D1900B76B6A /* ConsultationViewController.m */,
 				BC5A8B201B870D2900B76B6A /* GroupViewController.h */,
 				BC5A8B211B870D2900B76B6A /* GroupViewController.m */,
+				BC8D06491B8AC70A0070E5FA /* ListCategoryViewController.h */,
+				BC8D064A1B8AC70A0070E5FA /* ListCategoryViewController.m */,
+				BC425BD41B8D6A5F0055E030 /* NewConsultationViewController.h */,
+				BC425BD51B8D6A5F0055E030 /* NewConsultationViewController.m */,
+				BC425BD71B8D6A720055E030 /* SubjectViewController.h */,
+				BC425BD81B8D6A720055E030 /* SubjectViewController.m */,
+				BC425BEF1B8DB9B70055E030 /* SubjectDetailViewController.h */,
+				BC425BF01B8DB9B70055E030 /* SubjectDetailViewController.m */,
 			);
 			path = ViewsControllers;
 			sourceTree = "<group>";
@@ -2655,6 +2761,10 @@
 				BC5A8B111B86F59E00B76B6A /* MyUtil.m */,
 				BC5A8B821B871A4E00B76B6A /* HttpManager.h */,
 				BC5A8B831B871A4E00B76B6A /* HttpManager.m */,
+				BC8D064F1B8AE91E0070E5FA /* RootViewController.h */,
+				BC8D06501B8AE91E0070E5FA /* RootViewController.m */,
+				BC425BF21B8DBD7D0055E030 /* RootPopViewController.h */,
+				BC425BF31B8DBD7D0055E030 /* RootPopViewController.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -3477,12 +3587,17 @@
 				BC5A8B3B1B8719FA00B76B6A /* AFSecurityPolicy.m in Sources */,
 				BCBF20331B85ED9400A2A7CE /* AppDelegate.m in Sources */,
 				BC5A8BA41B871D4C00B76B6A /* MASCompositeConstraint.m in Sources */,
+				BC425BD91B8D6A720055E030 /* SubjectViewController.m in Sources */,
 				BC5A8BA61B871D4C00B76B6A /* MASConstraintMaker.m in Sources */,
+				BC425BE51B8D96DF0055E030 /* ConsultationSmallCell.m in Sources */,
 				BC5A8BA81B871D4C00B76B6A /* MASViewAttribute.m in Sources */,
 				BC5A8B841B871A4E00B76B6A /* HttpManager.m in Sources */,
+				BC3F33F31B8B3243007280C5 /* RankingModel.m in Sources */,
+				BC425BF11B8DB9B70055E030 /* SubjectDetailViewController.m in Sources */,
 				BC5A8BA91B871D4C00B76B6A /* MASViewConstraint.m in Sources */,
 				BC5A8B4F1B871A0E00B76B6A /* MJRefreshHeaderView.m in Sources */,
 				BC5A8B3A1B8719FA00B76B6A /* AFNetworkReachabilityManager.m in Sources */,
+				BC3F33F91B8B41B1007280C5 /* RankingView.m in Sources */,
 				BC5A8B1F1B870D1900B76B6A /* ConsultationViewController.m in Sources */,
 				BC5A8B7B1B871A1500B76B6A /* UIButton+WebCache.m in Sources */,
 				BC5A8B4D1B871A0E00B76B6A /* MJRefreshConst.m in Sources */,
@@ -3490,6 +3605,7 @@
 				BC5A8B7D1B871A1500B76B6A /* UIImage+MultiFormat.m in Sources */,
 				BC5A8B3C1B8719FA00B76B6A /* AFURLConnectionOperation.m in Sources */,
 				BC5A8B761B871A1500B76B6A /* SDWebImageDecoder.m in Sources */,
+				BC8D06421B8AB78A0070E5FA /* CategoryModel.m in Sources */,
 				BC5A8B4E1B871A0E00B76B6A /* MJRefreshFooterView.m in Sources */,
 				BC5A8B801B871A1500B76B6A /* UIImageView+WebCache.m in Sources */,
 				BC5A8B371B8719FA00B76B6A /* AFHTTPRequestOperation.m in Sources */,
@@ -3501,29 +3617,45 @@
 				BC5A8BAB1B871D4C00B76B6A /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
 				BC5A8B3D1B8719FA00B76B6A /* AFURLRequestSerialization.m in Sources */,
 				BC5A8B7F1B871A1500B76B6A /* UIImageView+HighlightedWebCache.m in Sources */,
+				BC8D06511B8AE91E0070E5FA /* RootViewController.m in Sources */,
 				BC5A8AD51B86B1F500B76B6A /* RootPagesViewController.m in Sources */,
+				BC8D064B1B8AC70A0070E5FA /* ListCategoryViewController.m in Sources */,
 				BC5A8B3F1B8719FA00B76B6A /* AFURLSessionManager.m in Sources */,
 				BC5A8B221B870D2900B76B6A /* GroupViewController.m in Sources */,
 				BC5A8B381B8719FA00B76B6A /* AFHTTPRequestOperationManager.m in Sources */,
 				BC5A8BA51B871D4C00B76B6A /* MASConstraint.m in Sources */,
+				BC425BD61B8D6A5F0055E030 /* NewConsultationViewController.m in Sources */,
+				BC425BCD1B8D4CEC0055E030 /* GroupModel.m in Sources */,
+				BC3DBF8D1B8C88AC00B66E68 /* StarView.m in Sources */,
 				BC5A8B811B871A1500B76B6A /* UIView+WebCacheOperation.m in Sources */,
 				BC5A8B751B871A1500B76B6A /* SDWebImageCompat.m in Sources */,
+				BC425BD31B8D529D0055E030 /* GroupHeaderView.m in Sources */,
 				BCBF20301B85ED9400A2A7CE /* main.m in Sources */,
 				BC5A8B871B871A9200B76B6A /* ExpressModel.m in Sources */,
 				BC5A8BAD1B871D4C00B76B6A /* ViewController+MASAdditions.m in Sources */,
+				BC425BE81B8DA8040055E030 /* SubjectModel.m in Sources */,
 				BC5A8B721B871A1500B76B6A /* MKAnnotationView+WebCache.m in Sources */,
 				BC5A8B3E1B8719FA00B76B6A /* AFURLResponseSerialization.m in Sources */,
 				BC5A8B121B86F59E00B76B6A /* MyUtil.m in Sources */,
 				BC5A8B7A1B871A1500B76B6A /* SDWebImagePrefetcher.m in Sources */,
 				BC5A8B191B870CEC00B76B6A /* CategoryViewController.m in Sources */,
 				BC5A8B781B871A1500B76B6A /* SDWebImageDownloaderOperation.m in Sources */,
+				BC425BE21B8D96D30055E030 /* ConsultationBigCell.m in Sources */,
+				BC425BEE1B8DB5250055E030 /* SubjectDetailModel.m in Sources */,
+				BC425BD01B8D4FBE0055E030 /* GroupCell.m in Sources */,
 				BC5A8B1C1B870CFC00B76B6A /* ExpressViewController.m in Sources */,
+				BC3F33F01B8AFD53007280C5 /* CategoryDetailCell.m in Sources */,
 				BC5A8B791B871A1500B76B6A /* SDWebImageManager.m in Sources */,
 				BC5A8BA71B871D4C00B76B6A /* MASLayoutConstraint.m in Sources */,
+				BC3F33F61B8B3EC3007280C5 /* RankingCell.m in Sources */,
 				BC5A8B7E1B871A1500B76B6A /* UIImage+WebP.m in Sources */,
+				BC425BEB1B8DAE800055E030 /* SubjectCell.m in Sources */,
+				BC425BF41B8DBD7D0055E030 /* RootPopViewController.m in Sources */,
 				BC5A8B161B870CDC00B76B6A /* RankingViewController.m in Sources */,
 				BC5A8BAA1B871D4C00B76B6A /* NSArray+MASAdditions.m in Sources */,
 				BC5A8B741B871A1500B76B6A /* SDImageCache.m in Sources */,
+				BC425BDF1B8D8FED0055E030 /* ConsultationModel.m in Sources */,
+				BC8D06451B8ABB330070E5FA /* CategoryCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
