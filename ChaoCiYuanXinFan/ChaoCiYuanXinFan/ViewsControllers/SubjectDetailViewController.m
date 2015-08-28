@@ -10,6 +10,7 @@
 #import "HttpManager.h"
 #import "Const.h"
 #import "SubjectDetailModel.h"
+#import "KVNProgress.h"
 
 @interface SubjectDetailViewController () <HttpManagerDelegate, UIWebViewDelegate>
 
@@ -20,6 +21,8 @@
 
 @implementation SubjectDetailViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -29,7 +32,7 @@
     NSString *bgString = @"";
     if(_type == 1){
         bgString = @"zxzxtop";
-    }else{
+    }else if(_type == 2){
         bgString = @"jczttop";
     }
     
@@ -37,11 +40,13 @@
     [rightBtn setBackgroundImage:[UIImage imageNamed:@"psharebtn"] forState:UIControlStateNormal];
     [rightBtn setBackgroundImage:[UIImage imageNamed:@"psharebtn_hover"] forState:UIControlStateHighlighted];
     
-    [self addNav:nil bgImage:bgString rightBtn:rightBtn withLength:20];
+    [self addNav:nil bgImage:bgString type:LongLength rightBtn:rightBtn withLength:20];
     
     _webView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 64, ScreenWidth, ScreenHeight-64)];
     _webView.delegate = self;
     [_webView setScalesPageToFit:YES];
+    _webView.backgroundColor = [UIColor clearColor];
+    _webView.hidden = YES;
     [self.view addSubview:_webView];
     
     [self downloadData];
@@ -69,11 +74,28 @@
                                                           error:nil];
     _model = [[SubjectDetailModel alloc] init];
     [_model setValuesForKeysWithDictionary:dic];
-    
-    _model.html = [_model.html stringByReplacingOccurrencesOfString:@"data-original" withString:@"src"];
-    
-    _webView.scalesPageToFit = YES;
+
     [_webView loadHTMLString:_model.html baseURL:nil];
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView{
+    [KVNProgress show];
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView{
+    NSString *jsString = [NSString stringWithFormat:
+                          @"document.getElementById(\"Gtitle\").setAttribute(\"style\", \"font-size:30px;\");"
+                          "var child=document.getElementById(\"cnzz\");"
+                          "child.parentNode.removeChild(child);"
+                          "nodes = document.getElementsByTagName(\"img\");"
+                          "for(i = 0; i < nodes.length; i++){"
+                          "nodes[i].setAttribute(\"src\", nodes[i].getAttribute(\"data-original\"));"
+                          "nodes[i].setAttribute(\"style\", \"width:%f\")"
+                          "}", ScreenWidth-30];
+    [_webView stringByEvaluatingJavaScriptFromString:jsString];
+    
+    [KVNProgress dismiss];
+    _webView.hidden = NO;
 }
 
 @end

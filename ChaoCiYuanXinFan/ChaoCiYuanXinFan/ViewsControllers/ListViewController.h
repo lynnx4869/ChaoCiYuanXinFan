@@ -8,9 +8,15 @@
 
 #import "RootPopViewController.h"
 
-@interface ListCategoryViewController : RootPopViewController
+typedef enum : NSUInteger{
+    CategoryList,
+    SearchList
+} ListType;
+
+@interface ListViewController : RootPopViewController
 
 @property (nonatomic, strong) NSString *catId;
-@property (nonatomic, strong) NSString *typeTitle;
+@property (nonatomic, strong) NSString *navTitle;
+@property (nonatomic, assign) ListType type;
 
 @end

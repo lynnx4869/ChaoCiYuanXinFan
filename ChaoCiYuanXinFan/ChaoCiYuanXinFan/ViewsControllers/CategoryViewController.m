@@ -10,7 +10,7 @@
 #import "MJRefresh.h"
 #import "CategoryModel.h"
 #import "CategoryCell.h"
-#import "ListCategoryViewController.h"
+#import "ListViewController.h"
 
 @interface CategoryViewController ()
     <UICollectionViewDelegate, UICollectionViewDataSource, MJRefreshBaseViewDelegate, HttpManagerDelegate>
@@ -122,11 +122,12 @@
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     CategoryModel *model = _dataArray[indexPath.item];    
     
-    ListCategoryViewController *lcvc = [[ListCategoryViewController alloc] init];
-    lcvc.catId = model.catId;
-    lcvc.typeTitle = model.name;
+    ListViewController *lvc = [[ListViewController alloc] init];
+    lvc.catId = model.catId;
+    lvc.navTitle = model.name;
+    lvc.type = CategoryList;
     if(self.delegate){
-        [self.delegate.navigationController pushViewController:lcvc animated:YES];
+        [self.delegate.navigationController pushViewController:lvc animated:YES];
     }
 }
 

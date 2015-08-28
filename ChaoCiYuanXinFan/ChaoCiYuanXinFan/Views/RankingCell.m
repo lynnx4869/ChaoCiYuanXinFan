@@ -10,7 +10,7 @@
 #import "UIImageView+WebCache.h"
 #import "Masonry.h"
 #import "RankingView.h"
-#import "ListCategoryViewController.h"
+#import "ListViewController.h"
 #import "StarView.h"
 
 @interface RankingCell ()
@@ -379,11 +379,11 @@
 
 #pragma mark - ClickAction
 - (void)moreClick:(UIButton *)btn{
-    ListCategoryViewController *lcvc = [[ListCategoryViewController alloc] init];
-    lcvc.catId = _model.catId;
-    lcvc.typeTitle = _model.type;
+    ListViewController *lvc = [[ListViewController alloc] init];
+    lvc.catId = _model.catId;
+    lvc.navTitle = _model.type;
     if(self.delegate){
-        [self.delegate.navigationController pushViewController:lcvc animated:YES];
+        [self.delegate.navigationController pushViewController:lvc animated:YES];
     }
 }
 

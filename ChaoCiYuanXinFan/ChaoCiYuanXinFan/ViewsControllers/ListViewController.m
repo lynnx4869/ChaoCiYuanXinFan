@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 lyning. All rights reserved.
 //
 
-#import "ListCategoryViewController.h"
+#import "ListViewController.h"
 #import "Const.h"
 #import "MJRefresh.h"
 #import "HttpManager.h"
@@ -14,7 +14,7 @@
 #import "ExpressModel.h"
 #import "CategoryDetailCell.h"
 
-@interface ListCategoryViewController ()
+@interface ListViewController ()
     <UITableViewDelegate, UITableViewDataSource, MJRefreshBaseViewDelegate, HttpManagerDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
@@ -25,14 +25,18 @@
 
 @end
 
-@implementation ListCategoryViewController
+@implementation ListViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor whiteColor];
     
-    [self addNav:_typeTitle bgImage:nil rightBtn:nil withLength:0];
+    if(_type == CategoryList){
+        [self addNav:_navTitle bgImage:nil type:LongLength rightBtn:nil withLength:0];
+    }else if(_type == SearchList){
+        [self addNav:[NSString stringWithFormat:@"\"%@\"搜索结果", _navTitle] bgImage:nil type:LongLength rightBtn:nil withLength:0];
+    }
     
     _dataArray = [NSMutableArray array];
     _isLoading = NO;
@@ -67,7 +71,12 @@
     
     HttpManager *manager = [[HttpManager alloc] init];
     manager.delegate = self;
-    [manager requestGet:[NSString stringWithFormat:lListByCategoryUrl, _catId]];
+    if(_type == CategoryList){
+        [manager requestGet:[NSString stringWithFormat:lListByCategoryUrl, _catId]];
+    }else if(_type == SearchList){
+        NSString *urlString = [NSString stringWithFormat:lSearchUrl, _navTitle];
+        [manager requestGet:[urlString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    }
 }
 
 #pragma mark - HttpManagerDelegate

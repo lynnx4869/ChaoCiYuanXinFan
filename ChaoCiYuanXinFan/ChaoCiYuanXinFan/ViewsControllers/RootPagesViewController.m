@@ -14,6 +14,9 @@
 #import "ExpressViewController.h"
 #import "ConsultationViewController.h"
 #import "GroupViewController.h"
+#import "SettingViewController.h"
+#import "SearchViewController.h"
+#import "TimeViewController.h"
 
 @interface RootPagesViewController ()
     <UIPageViewControllerDelegate, UIPageViewControllerDataSource>
@@ -85,6 +88,10 @@
                                target:self
                                action:@selector(gotoCollects:)];
     [bgImageView addSubview:collectsBtn];
+    
+    UIImageView *lineImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 43, ScreenWidth, 1)];
+    lineImageView.image = [UIImage imageNamed:@"line_index"];
+    [bgImageView addSubview:lineImageView];
 }
 
 - (void)createTopView{
@@ -146,15 +153,18 @@
 
 #pragma mark - 点击事件
 - (void)gotoSetting:(UIButton *)btn{
-    
+    SettingViewController *svc = [[SettingViewController alloc] init];
+    [self.navigationController pushViewController:svc animated:YES];
 }
 
 - (void)gotoSearch:(UIButton *)btn{
-    
+    SearchViewController *svc = [[SearchViewController alloc] init];
+    [self.navigationController pushViewController:svc animated:YES];
 }
 
 - (void)gotoTimeLine:(UIButton *)btn{
-    
+    TimeViewController *tvc = [[TimeViewController alloc] init];
+    [self.navigationController pushViewController:tvc animated:YES];
 }
 
 - (void)gotoCollects:(UIButton *)btn{

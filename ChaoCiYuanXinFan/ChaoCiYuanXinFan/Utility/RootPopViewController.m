@@ -27,7 +27,7 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (void)addNav:(NSString *)title bgImage:(NSString *)imageName rightBtn:(UIButton *)btn withLength:(CGFloat)length{
+- (void)addNav:(NSString *)title bgImage:(NSString *)imageName type:(BgImageLength)type rightBtn:(UIButton *)btn withLength:(CGFloat)length{
     UIImageView *bgImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 20, ScreenWidth, 44)];
     bgImageView.userInteractionEnabled = YES;
     [self.view addSubview:bgImageView];
@@ -52,13 +52,22 @@
         [titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.top.equalTo(bgImageView.mas_top).with.offset(0);
             make.bottom.equalTo(bgImageView.mas_bottom).with.offset(0);
-            make.left.equalTo(bgImageView.mas_left).with.offset(100);
-            make.right.equalTo(bgImageView.mas_right).with.offset(-100);
+            make.left.equalTo(bgImageView.mas_left).with.offset(40);
+            make.right.equalTo(bgImageView.mas_right).with.offset(-40);
         }];
     }
     
-    if(imageName){
+    if(imageName && type == LongLength){
         bgImageView.image = [UIImage imageNamed:imageName];
+    }else if(imageName && type == ShortLength){
+        bgImageView.image = [UIImage imageNamed:@"bg_nav"];
+        
+        UIImage *image = [UIImage imageNamed:imageName];
+        CGFloat width = image.size.width * 28 / image.size.height;
+        
+        UIImageView *titleImageView = [[UIImageView alloc] initWithFrame:CGRectMake((ScreenWidth-width)/2, 6, width, 28)];
+        titleImageView.image = image;
+        [bgImageView addSubview:titleImageView];
     }else{
         bgImageView.image = [UIImage imageNamed:@"bg_nav"];
     }

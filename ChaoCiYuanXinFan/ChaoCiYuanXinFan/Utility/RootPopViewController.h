@@ -8,8 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+typedef enum : NSUInteger{
+    ShortLength,
+    LongLength
+} BgImageLength;
+
 @interface RootPopViewController : UIViewController
 
-- (void)addNav:(NSString *)title bgImage:(NSString *)imageName rightBtn:(UIButton *)btn withLength:(CGFloat)length;
+- (void)addNav:(NSString *)title bgImage:(NSString *)imageName type:(BgImageLength)type rightBtn:(UIButton *)btn withLength:(CGFloat)length;
 
 @end

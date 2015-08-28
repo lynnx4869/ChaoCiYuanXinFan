@@ -44,9 +44,11 @@
 #define lCommendUrl @"http://api.bbs.18touch.com/Post/80969?dk=47cc89f3630b6e060e84f639738c08df947f77b3&ak=&dl=false&comment=2&count=20&order=2"
 
 //搜索
-#define l @"http://api.18touch.com/index.php?c=acg&a=searchVedio&name=%@&offset=1"
+#define lSearchUrl @"http://api.18touch.com/index.php?c=acg&a=searchVedio&name=%@&offset=1"
 //关键词
 #define lHotKeyUrl @"http://api.18touch.com/index.php?c=acg&a=getHotKeyWords"
 
+//检查更新(POST)(id=907769056)
+#define lUpdateUrl @"http://itunes.apple.com/lookup"
 
 #endif
