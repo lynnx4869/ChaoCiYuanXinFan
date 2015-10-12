@@ -3862,7 +3862,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/qianfeng/GitHub/ChaoCiYuanXinFan/ChaoCiYuanXinFan/ChaoCiYuanXinFan/Utility/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lyning/Documents/Git/ChaoCiYuanXinFan/ChaoCiYuanXinFan/ChaoCiYuanXinFan/Utility/PrefixHeader.pch;
 				INFOPLIST_FILE = ChaoCiYuanXinFan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -3874,7 +3874,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = /Users/qianfeng/GitHub/ChaoCiYuanXinFan/ChaoCiYuanXinFan/ChaoCiYuanXinFan/Utility/PrefixHeader.pch;
+				GCC_PREFIX_HEADER = /Users/lyning/Documents/Git/ChaoCiYuanXinFan/ChaoCiYuanXinFan/ChaoCiYuanXinFan/Utility/PrefixHeader.pch;
 				INFOPLIST_FILE = ChaoCiYuanXinFan/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
